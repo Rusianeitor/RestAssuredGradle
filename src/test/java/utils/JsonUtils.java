@@ -11,9 +11,14 @@ import java.util.Map;
 
 public class JsonUtils {
     private static ObjectMapper objectMapper = new ObjectMapper();
-    public static Map<String,String> getJsonDataAsMap(String jsonFileName) throws IOException {
+    /*public static Map<String,String> getJsonDataAsMap(String jsonFileName) throws IOException {
         String completeJsonFilePath = System.getProperty("user.dir") + "/src/test/resources/" + jsonFileName;
         Map<String,String> data = objectMapper.readValue(new File(completeJsonFilePath), new TypeReference<>(){});
+        return data;
+    }*/
+    public static Map<String,Object> getJsonDataAsMap(String jsonFileName) throws IOException {
+        String completeJsonFilePath = System.getProperty("user.dir") + "/src/test/resources/" + jsonFileName;
+        Map<String,Object> data = objectMapper.readValue(new File(completeJsonFilePath), new TypeReference<>(){});
         return data;
     }
 }

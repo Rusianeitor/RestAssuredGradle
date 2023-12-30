@@ -1,8 +1,12 @@
+package users;
+
+import io.restassured.internal.http.HTTPBuilder;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import restUtils.RestUtils;
+import users.pojos.User;
 import utils.JsonUtils;
 
 import java.io.IOException;
@@ -12,7 +16,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.*;
 
-public class ReqResTests {
+public class ReqResTests extends ReqResAPIs {
 
     /*@BeforeEach
     public void setup() {
@@ -45,13 +49,10 @@ public class ReqResTests {
 
     @Test
     public void createUserTest() throws IOException {
-        String env = System.getProperty("env") == null ? "qa" : System.getProperty("env");
-        Map<String, String> data = JsonUtils.getJsonDataAsMap("users/"+env+"/usersApiData.json");
-        String endpoint = data.get("createUsersEndpoint");
-        //String payload = Payloads.getCreateUserPayloadFromString("Jeff", "QA Trainee");
-        Map<String, Object> payload = Payloads.getCreateUserPayloadFromMap("Jeff", "QA Trainee");
-        Response response = RestUtils.performPost(endpoint, payload);
-        Assertions.assertEquals(response.statusCode(), 201);
+        //Map<String, Object> payload = Payloads.getCreateUserPayloadFromMap();
+        User payload = Payloads.getCreateUserPaloadFromPojo();
+        Response response = createUser(payload);
+        Assertions.assertEquals(response.statusCode(), HttpStatus.SC_CREATED);
     }
 
     @Test
