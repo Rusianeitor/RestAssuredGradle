@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">5</div>
+<div class="counter">1</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">5.167s</div>
+<div class="counter">0.140s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,115 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="createUserTest()"></a>
+<h3 class="failures">createUserTest()</h3>
+<span class="code">
+<pre>java.io.FileNotFoundException: C:\Users\Usuario\IdeaProjects\RestAssuredGradle\src\test\resources\users\usersApiData.json (El sistema no puede encontrar el archivo especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
+	at com.fasterxml.jackson.core.TokenStreamFactory._fileInputStream(TokenStreamFactory.java:318)
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:1208)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3731)
+	at utils.JsonUtils.getJsonDataAsMap(JsonUtils.java:16)
+	at ReqResTests.createUserTest(ReqResTests.java:49)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,567 +180,11 @@
 </tr>
 </thead>
 <tr>
-<td class="success">deleteUserTest()</td>
-<td class="success">0.580s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">getSingleUserTest()</td>
-<td class="success">0.305s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">loginTest()</td>
-<td class="success">2.811s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">patchUserTest()</td>
-<td class="success">0.672s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">putUserTest()</td>
-<td class="success">0.799s</td>
-<td class="success">passed</td>
+<td class="failures">createUserTest()</td>
+<td class="failures">0.140s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
-</div>
-<div id="tab1" class="tab">
-<h2>Standard output</h2>
-<span class="code">
-<pre>Request method:	POST
-Request URI:	https://reqres.in/api/login
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:
-{
-    &quot;email&quot;: &quot;eve.holt@reqres.in&quot;,
-    &quot;password&quot;: &quot;cityslicka&quot;
-}
-HTTP/1.1 200 OK
-Date: Fri, 29 Dec 2023 23:36:07 GMT
-Content-Type: application/json; charset=utf-8
-Content-Length: 29
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703892967&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=h%2B4gf9qpoN%2FgBxKtQRGy1n%2Bl29FODjP1l8cJQyanQac%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703892967&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=h%2B4gf9qpoN%2FgBxKtQRGy1n%2Bl29FODjP1l8cJQyanQac%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;1d-lGCrvD6B7Qzk11+2C98+nGhhuec&quot;
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Server: cloudflare
-CF-RAY: 83d5dd022ea9a673-GRU
-
-{
-    &quot;token&quot;: &quot;QpwL5tke4Pnpja7X4&quot;
-}
-Request method:	PUT
-Request URI:	https://reqres.in/api/users/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:
-{
-    &quot;name&quot;: &quot;jeff&quot;,
-    &quot;job&quot;: &quot;qa&quot;
-}
-Request method:	PUT
-Request URI:	https://reqres.in/api/users/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:
-{
-    &quot;name&quot;: &quot;jeff&quot;,
-    &quot;job&quot;: &quot;qa&quot;
-}
-HTTP/1.1 200 OK
-Date: Fri, 29 Dec 2023 23:36:08 GMT
-Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703892968&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=YPGnk9z6w0IL2Veaa8LU8FyFw7%2Fc9%2BPh5bIkuPhNSXU%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703892968&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=YPGnk9z6w0IL2Veaa8LU8FyFw7%2Fc9%2BPh5bIkuPhNSXU%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;41-f1f7PybdCW7OXtrKo7a1/BQhN0E&quot;
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Vary: Accept-Encoding
-Server: cloudflare
-CF-RAY: 83d5dd0bf833a691-GRU
-Content-Encoding: gzip
-
-{
-    &quot;name&quot;: &quot;jeff&quot;,
-    &quot;job&quot;: &quot;qa&quot;,
-    &quot;updatedAt&quot;: &quot;2023-12-29T23:36:08.644Z&quot;
-}
-HTTP/1.1 200 OK
-Date: Fri, 29 Dec 2023 23:36:08 GMT
-Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703892968&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=YPGnk9z6w0IL2Veaa8LU8FyFw7%2Fc9%2BPh5bIkuPhNSXU%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703892968&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=YPGnk9z6w0IL2Veaa8LU8FyFw7%2Fc9%2BPh5bIkuPhNSXU%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;41-f1f7PybdCW7OXtrKo7a1/BQhN0E&quot;
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Vary: Accept-Encoding
-Server: cloudflare
-CF-RAY: 83d5dd0bf833a691-GRU
-Content-Encoding: gzip
-
-{
-    &quot;name&quot;: &quot;jeff&quot;,
-    &quot;job&quot;: &quot;qa&quot;,
-    &quot;updatedAt&quot;: &quot;2023-12-29T23:36:08.644Z&quot;
-}
-Request method:	GET
-Request URI:	https://reqres.in/api/users/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:			&lt;none&gt;
-Request method:	GET
-Request URI:	https://reqres.in/api/users/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:			&lt;none&gt;
-Request method:	GET
-Request URI:	https://reqres.in/api/users/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:			&lt;none&gt;
-HTTP/1.1 200 OK
-Date: Fri, 29 Dec 2023 23:36:09 GMT
-Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703817610&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=7uzY7o6%2F3Ot1UniNWPk2cEz%2BjzVbB0QQ%2B3V3GSFfBBE%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703817610&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=7uzY7o6%2F3Ot1UniNWPk2cEz%2BjzVbB0QQ%2B3V3GSFfBBE%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;118-pbdwwFo9SKNhD3Lx5iHJyngpq00&quot;
-Via: 1.1 vegur
-Cache-Control: max-age=14400
-CF-Cache-Status: HIT
-Age: 3289
-Vary: Accept-Encoding
-Server: cloudflare
-CF-RAY: 83d5dd10af6da660-GRU
-Content-Encoding: gzip
-
-{
-    &quot;data&quot;: {
-        &quot;id&quot;: 2,
-        &quot;email&quot;: &quot;janet.weaver@reqres.in&quot;,
-        &quot;first_name&quot;: &quot;Janet&quot;,
-        &quot;last_name&quot;: &quot;Weaver&quot;,
-        &quot;avatar&quot;: &quot;https://reqres.in/img/faces/2-image.jpg&quot;
-    },
-    &quot;support&quot;: {
-        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,
-        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;
-    }
-}
-HTTP/1.1 200 OK
-Date: Fri, 29 Dec 2023 23:36:09 GMT
-Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703817610&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=7uzY7o6%2F3Ot1UniNWPk2cEz%2BjzVbB0QQ%2B3V3GSFfBBE%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703817610&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=7uzY7o6%2F3Ot1UniNWPk2cEz%2BjzVbB0QQ%2B3V3GSFfBBE%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;118-pbdwwFo9SKNhD3Lx5iHJyngpq00&quot;
-Via: 1.1 vegur
-Cache-Control: max-age=14400
-CF-Cache-Status: HIT
-Age: 3289
-Vary: Accept-Encoding
-Server: cloudflare
-CF-RAY: 83d5dd10af6da660-GRU
-Content-Encoding: gzip
-
-{
-    &quot;data&quot;: {
-        &quot;id&quot;: 2,
-        &quot;email&quot;: &quot;janet.weaver@reqres.in&quot;,
-        &quot;first_name&quot;: &quot;Janet&quot;,
-        &quot;last_name&quot;: &quot;Weaver&quot;,
-        &quot;avatar&quot;: &quot;https://reqres.in/img/faces/2-image.jpg&quot;
-    },
-    &quot;support&quot;: {
-        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,
-        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;
-    }
-}
-HTTP/1.1 200 OK
-Date: Fri, 29 Dec 2023 23:36:09 GMT
-Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703817610&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=7uzY7o6%2F3Ot1UniNWPk2cEz%2BjzVbB0QQ%2B3V3GSFfBBE%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703817610&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=7uzY7o6%2F3Ot1UniNWPk2cEz%2BjzVbB0QQ%2B3V3GSFfBBE%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;118-pbdwwFo9SKNhD3Lx5iHJyngpq00&quot;
-Via: 1.1 vegur
-Cache-Control: max-age=14400
-CF-Cache-Status: HIT
-Age: 3289
-Vary: Accept-Encoding
-Server: cloudflare
-CF-RAY: 83d5dd10af6da660-GRU
-Content-Encoding: gzip
-
-{
-    &quot;data&quot;: {
-        &quot;id&quot;: 2,
-        &quot;email&quot;: &quot;janet.weaver@reqres.in&quot;,
-        &quot;first_name&quot;: &quot;Janet&quot;,
-        &quot;last_name&quot;: &quot;Weaver&quot;,
-        &quot;avatar&quot;: &quot;https://reqres.in/img/faces/2-image.jpg&quot;
-    },
-    &quot;support&quot;: {
-        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,
-        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;
-    }
-}
-Request method:	PATCH
-Request URI:	https://reqres.in/api/user/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:
-{
-    &quot;name&quot;: &quot;jeff&quot;,
-    &quot;job&quot;: &quot;zion resident&quot;
-}
-Request method:	PATCH
-Request URI:	https://reqres.in/api/user/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:
-{
-    &quot;name&quot;: &quot;jeff&quot;,
-    &quot;job&quot;: &quot;zion resident&quot;
-}
-Request method:	PATCH
-Request URI:	https://reqres.in/api/user/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:
-{
-    &quot;name&quot;: &quot;jeff&quot;,
-    &quot;job&quot;: &quot;zion resident&quot;
-}
-Request method:	PATCH
-Request URI:	https://reqres.in/api/user/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:
-{
-    &quot;name&quot;: &quot;jeff&quot;,
-    &quot;job&quot;: &quot;zion resident&quot;
-}
-HTTP/1.1 200 OK
-Date: Fri, 29 Dec 2023 23:36:09 GMT
-Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703892969&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=z6yBsBJ25lkgkOSf6WpbZVbol%2BER08Rio2gYepDHBMc%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703892969&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=z6yBsBJ25lkgkOSf6WpbZVbol%2BER08Rio2gYepDHBMc%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;4c-Uxv9s44Wt3VGryuYK9kqWMUh3JA&quot;
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Server: cloudflare
-CF-RAY: 83d5dd11debf0de6-SCL
-Content-Encoding: gzip
-
-{
-    &quot;name&quot;: &quot;jeff&quot;,
-    &quot;job&quot;: &quot;zion resident&quot;,
-    &quot;updatedAt&quot;: &quot;2023-12-29T23:36:09.659Z&quot;
-}
-HTTP/1.1 200 OK
-Date: Fri, 29 Dec 2023 23:36:09 GMT
-Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703892969&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=z6yBsBJ25lkgkOSf6WpbZVbol%2BER08Rio2gYepDHBMc%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703892969&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=z6yBsBJ25lkgkOSf6WpbZVbol%2BER08Rio2gYepDHBMc%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;4c-Uxv9s44Wt3VGryuYK9kqWMUh3JA&quot;
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Server: cloudflare
-CF-RAY: 83d5dd11debf0de6-SCL
-Content-Encoding: gzip
-
-{
-    &quot;name&quot;: &quot;jeff&quot;,
-    &quot;job&quot;: &quot;zion resident&quot;,
-    &quot;updatedAt&quot;: &quot;2023-12-29T23:36:09.659Z&quot;
-}
-HTTP/1.1 200 OK
-Date: Fri, 29 Dec 2023 23:36:09 GMT
-Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703892969&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=z6yBsBJ25lkgkOSf6WpbZVbol%2BER08Rio2gYepDHBMc%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703892969&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=z6yBsBJ25lkgkOSf6WpbZVbol%2BER08Rio2gYepDHBMc%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;4c-Uxv9s44Wt3VGryuYK9kqWMUh3JA&quot;
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Server: cloudflare
-CF-RAY: 83d5dd11debf0de6-SCL
-Content-Encoding: gzip
-
-{
-    &quot;name&quot;: &quot;jeff&quot;,
-    &quot;job&quot;: &quot;zion resident&quot;,
-    &quot;updatedAt&quot;: &quot;2023-12-29T23:36:09.659Z&quot;
-}
-HTTP/1.1 200 OK
-Date: Fri, 29 Dec 2023 23:36:09 GMT
-Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703892969&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=z6yBsBJ25lkgkOSf6WpbZVbol%2BER08Rio2gYepDHBMc%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703892969&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=z6yBsBJ25lkgkOSf6WpbZVbol%2BER08Rio2gYepDHBMc%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;4c-Uxv9s44Wt3VGryuYK9kqWMUh3JA&quot;
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Server: cloudflare
-CF-RAY: 83d5dd11debf0de6-SCL
-Content-Encoding: gzip
-
-{
-    &quot;name&quot;: &quot;jeff&quot;,
-    &quot;job&quot;: &quot;zion resident&quot;,
-    &quot;updatedAt&quot;: &quot;2023-12-29T23:36:09.659Z&quot;
-}
-Request method:	DELETE
-Request URI:	https://reqres.in/api/users/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:			&lt;none&gt;
-Request method:	DELETE
-Request URI:	https://reqres.in/api/users/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:			&lt;none&gt;
-Request method:	DELETE
-Request URI:	https://reqres.in/api/users/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:			&lt;none&gt;
-Request method:	DELETE
-Request URI:	https://reqres.in/api/users/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:			&lt;none&gt;
-Request method:	DELETE
-Request URI:	https://reqres.in/api/users/2
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	&lt;none&gt;
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:			&lt;none&gt;
-HTTP/1.1 204 No Content
-Date: Fri, 29 Dec 2023 23:36:10 GMT
-Content-Length: 0
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703892970&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ImrREvPRIRideLFTK4pCbI4oAbXMbgnH8KzX4%2FAp%2BVs%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703892970&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ImrREvPRIRideLFTK4pCbI4oAbXMbgnH8KzX4%2FAp%2BVs%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;2-vyGp6PvFo4RvsFtPoIWeCReyIC8&quot;
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Server: cloudflare
-CF-RAY: 83d5dd1608272895-SCL
-HTTP/1.1 204 No Content
-Date: Fri, 29 Dec 2023 23:36:10 GMT
-Content-Length: 0
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703892970&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ImrREvPRIRideLFTK4pCbI4oAbXMbgnH8KzX4%2FAp%2BVs%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703892970&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ImrREvPRIRideLFTK4pCbI4oAbXMbgnH8KzX4%2FAp%2BVs%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;2-vyGp6PvFo4RvsFtPoIWeCReyIC8&quot;
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Server: cloudflare
-CF-RAY: 83d5dd1608272895-SCL
-HTTP/1.1 204 No Content
-Date: Fri, 29 Dec 2023 23:36:10 GMT
-Content-Length: 0
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703892970&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ImrREvPRIRideLFTK4pCbI4oAbXMbgnH8KzX4%2FAp%2BVs%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703892970&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ImrREvPRIRideLFTK4pCbI4oAbXMbgnH8KzX4%2FAp%2BVs%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;2-vyGp6PvFo4RvsFtPoIWeCReyIC8&quot;
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Server: cloudflare
-CF-RAY: 83d5dd1608272895-SCL
-HTTP/1.1 204 No Content
-Date: Fri, 29 Dec 2023 23:36:10 GMT
-Content-Length: 0
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703892970&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ImrREvPRIRideLFTK4pCbI4oAbXMbgnH8KzX4%2FAp%2BVs%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703892970&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ImrREvPRIRideLFTK4pCbI4oAbXMbgnH8KzX4%2FAp%2BVs%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;2-vyGp6PvFo4RvsFtPoIWeCReyIC8&quot;
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Server: cloudflare
-CF-RAY: 83d5dd1608272895-SCL
-HTTP/1.1 204 No Content
-Date: Fri, 29 Dec 2023 23:36:10 GMT
-Content-Length: 0
-Connection: keep-alive
-Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1703892970&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ImrREvPRIRideLFTK4pCbI4oAbXMbgnH8KzX4%2FAp%2BVs%3D&quot;}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1703892970&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ImrREvPRIRideLFTK4pCbI4oAbXMbgnH8KzX4%2FAp%2BVs%3D
-Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
-X-Powered-By: Express
-Access-Control-Allow-Origin: *
-Etag: W/&quot;2-vyGp6PvFo4RvsFtPoIWeCReyIC8&quot;
-Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Server: cloudflare
-CF-RAY: 83d5dd1608272895-SCL
-</pre>
-</span>
 </div>
 </div>
 <div id="footer">
@@ -648,7 +194,7 @@ CF-RAY: 83d5dd1608272895-SCL
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 29 dic. 2023 18:36:02</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 29 dic. 2023 20:44:41</p>
 </div>
 </div>
 </body>
